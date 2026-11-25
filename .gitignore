@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
+*.spec
+
+# Eski tek dosyalık makro ve ayarı (yerelde kalır)
+sol.py
+sol_ayar.json
+
+# Editör
+.vscode/
+.idea/

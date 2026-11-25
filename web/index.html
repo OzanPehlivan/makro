@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Makro Studio</title>
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-click" viewBox="0 0 24 24"><path d="M9 9l4.5 11 1.6-4.9L20 13.5z"/><path d="M7.2 2.8l.8 2.9M2.8 7.2l2.9.8M12 4.6l-1.6 1.6M4.6 12l1.6-1.6"/></symbol>
+    <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 7V5h16v2"/><path d="M12 5v14"/><path d="M9 19h6"/></symbol>
+    <symbol id="i-seq" viewBox="0 0 24 24"><rect x="3" y="4" width="6" height="6" rx="1.5"/><rect x="15" y="14" width="6" height="6" rx="1.5"/><path d="M9 7h4a2 2 0 0 1 2 2v5"/></symbol>
+    <symbol id="i-remap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></symbol>
+    <symbol id="i-launch" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+    <symbol id="i-disable" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4h6v3"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+    <symbol id="i-rec" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M7 14h10"/></symbol>
+    <symbol id="i-mouse" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="6"/><path d="M12 7v3"/></symbol>
+    <symbol id="i-wait" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9 2h6"/></symbol>
+    <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-ul" viewBox="0 0 24 24"><path d="M12 20V9M7 14l5-5 5 5M5 4h14"/></symbol>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 6.3a8 8 0 1 0 11.4 0"/></symbol>
+    <symbol id="i-app" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></symbol>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <div class="brand">
+    <img src="/icon.svg" alt="" width="26" height="26">
+    <span>Makro Studio</span>
+  </div>
+  <nav class="profiles" id="profiles" aria-label="Profiller"></nav>
+  <button class="icon-btn" id="add-profile" title="Yeni profil"><svg><use href="#i-plus"/></svg></button>
+  <div class="spacer"></div>
+  <div class="live" id="live" title="Şu an aktif profil ve ön plandaki uygulama"></div>
+  <button class="btn ghost" id="stop-all" title="Çalışan tüm makroları anında durdurur"><svg><use href="#i-stop"/></svg>Tümünü durdur</button>
+  <button class="master" id="master" role="switch" aria-checked="true">
+    <span class="master-dot"></span><span class="master-label">Makrolar açık</span>
+  </button>
+  <button class="icon-btn" id="open-settings" title="Ayarlar"><svg><use href="#i-gear"/></svg></button>
+</header>
+
+<main class="layout">
+  <section class="workspace" id="workspace">
+    <div class="profile-head" id="profile-head"></div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2>Klavye</h2>
+        <div class="legend">
+          <span><i class="lg lg-bound"></i>Atanmış</span>
+          <span><i class="lg lg-active"></i>Çalışıyor</span>
+          <span><i class="lg lg-combo"></i>Kombinasyonlu</span>
+        </div>
+      </div>
+      <div class="kb-wrap" id="kb-wrap"><div class="kb" id="kb"></div></div>
+    </div>
+
+    <div class="row2">
+      <div class="card mouse-card">
+        <div class="card-head"><h2>Fare</h2></div>
+        <div class="mouse" id="mouse"></div>
+        <p class="hint">Sol ve sağ tık tetik olamaz. Orta tuş ve yan tuşlar (4, 5) atanabilir.</p>
+      </div>
+      <div class="card list-card">
+        <div class="card-head">
+          <h2>Bu profildeki atamalar</h2>
+          <span class="count" id="bind-count"></span>
+        </div>
+        <div class="bind-list" id="bind-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="panel" id="panel"></aside>
+</main>
+
+<div class="overlay" id="capture-overlay" hidden>
+  <div class="capture-box">
+    <div class="capture-key"><svg><use href="#i-key"/></svg></div>
+    <h3>Bir tuşa bas</h3>
+    <p>Kombinasyon için önce Ctrl / Shift / Alt / Win tuşunu basılı tut.<br>Fare orta ve yan tuşları da olur. İptal: <kbd>Esc</kbd></p>
+    <button class="btn ghost" id="capture-cancel">İptal</button>
+  </div>
+</div>
+
+<div class="rec-bar" id="rec-bar" hidden>
+  <span class="rec-dot"></span>
+  <span>Kaydediliyor</span>
+  <span class="rec-time" id="rec-time">0.0 sn</span>
+  <span class="rec-note">Bastığın her tuş sırayla ve beklemeleriyle kaydedilir.</span>
+  <button class="btn danger" id="rec-stop"><svg><use href="#i-stop"/></svg>Durdur</button>
+</div>
+
+<div class="modal-bg" id="modal" hidden><div class="modal" id="modal-body" role="dialog" aria-modal="true"></div></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
